@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Voxel Clock</title>
+    <!-- Load 10 Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Chakra+Petch:wght@400;700&family=Codystar&family=Nova+Mono&family=Orbitron:wght@400;900&family=Roboto+Mono:wght@400;700&family=Share+Tech+Mono&family=Silkscreen&family=VT323&family=Wallpoet&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="scene">
+        <div id="clock-stage">
+            <!-- Time layers added by JS -->
+        </div>
+    </div>
+
+    <!-- Settings Overlay -->
+    <div id="settings-overlay" class="hidden">
+        <div class="settings-panel">
+            <h2>Settings</h2>
+
+            <div class="setting-group">
+                <label>Clock Orientation (X / Y)</label>
+                <input type="range" id="orient-x" min="-90" max="90" value="-15">
+                <input type="range" id="orient-y" min="-90" max="90" value="15">
+            </div>
+
+            <div class="setting-group">
+                <label>Font Size</label>
+                <input type="range" id="font-size" min="20" max="150" value="64">
+            </div>
+
+            <div class="setting-group">
+                <label>Font Family</label>
+                <select id="font-family">
+                    <option value="'Codystar', cursive">Codystar (Dots)</option>
+                    <option value="'Silkscreen', cursive">Silkscreen (Pixel)</option>
+                    <option value="'Orbitron', sans-serif">Orbitron</option>
+                    <option value="'Share Tech Mono', monospace">Share Tech Mono</option>
+                    <option value="'Roboto Mono', monospace">Roboto Mono</option>
+                    <option value="'VT323', monospace">VT323</option>
+                    <option value="'Audiowide', cursive">Audiowide</option>
+                    <option value="'Chakra Petch', sans-serif">Chakra Petch</option>
+                    <option value="'Wallpoet', cursive">Wallpoet</option>
+                    <option value="'Nova Mono', monospace">Nova Mono</option>
+                </select>
+            </div>
+
+            <button id="close-settings">Close</button>
+        </div>
+    </div>
+</body>
+
+</html>
